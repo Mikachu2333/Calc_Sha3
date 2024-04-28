@@ -2,5 +2,6 @@
 Copy file sha3_256 to clipboard
 
 ## Usage
-`_sha3 <file_path>`
-`_sha3.exe <file_path>`
+Linux: `_sha3 <file_path>`
+
+Windows: `_sha3.exe <file_path>`
