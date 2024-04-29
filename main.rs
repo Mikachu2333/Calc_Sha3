@@ -6,6 +6,9 @@ use std::path::PathBuf;
 
 fn main() {
     let args: Vec<String> = std::env::args().collect();
+    //let mut args: Vec<String> = std::env::args().collect();
+    //args.push("/usr/bin/apt".to_string());
+
     if args.len() != 2 {
         panic!("Wrong args.");
     }
@@ -34,6 +37,8 @@ fn calc_sha3_256(file_path: &PathBuf) -> String {
 
 fn set_clipboard(information: &String) {
     let mut clipboard = Clipboard::new().expect("Error read clipboard.");
-    clipboard.set_text(&information.to_owned()).expect("Error write clipboard.");
-    println!("Success! {}",&information);
+    clipboard
+        .set_text(&information.to_owned())
+        .expect("Error write clipboard.");
+    println!("Success! {}", &information);
 }
