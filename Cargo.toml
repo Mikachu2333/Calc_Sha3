@@ -11,5 +11,5 @@ opt-level = "z"
 strip = true
 
 [dependencies]
-arboard = "3.3.2"
+arboard = {version = "3.4.0", default-features = false}
 sha3 = "0.10.8"
